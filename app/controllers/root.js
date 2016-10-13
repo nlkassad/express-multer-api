@@ -6,7 +6,7 @@ const controller = require('lib/wiring/controller');
 const root = (req, res) => {
   res.json({
     index: {
-      title: 'Express Template',
+      title: 'Express Multer Api',
       environment: req.app.get('env'),
     },
   });
