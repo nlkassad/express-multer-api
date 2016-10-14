@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose');
 
-const UploadSchema = new mongoose.Schema({
+const uploadSchema = new mongoose.Schema({
   comment: {
     type: String,
     required: true,
@@ -15,10 +15,10 @@ const UploadSchema = new mongoose.Schema({
   timestamps: true,
 });
 
-UploadSchema.virtual('length').get(function () {
+uploadSchema.virtual('length').get(function () {
   return this.text.length;
 });
 
-const Upload = mongoose.model('Upload', UploadSchema);
+const Upload = mongoose.model('Upload', uploadSchema);
 
 module.exports = Upload;
